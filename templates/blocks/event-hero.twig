@@ -1,0 +1,20 @@
+<p class="iastate-article__back-btn"><a href="{{ function('get_post_type_archive_link','events') }}">View All Events</a></p>
+<div class="hero--event-detail"{% if fields.anchor_target|length > 0 %} id="{{ fields.anchor_target }}"{% endif %}>
+    <h1 class="hero--event-detail__headline">
+      {% if post.title %}
+        {{ post.title }}
+      {% else %}
+        {{ wp_title }}
+      {% endif %}
+    </h1>
+  {% if post._thumbnail_id != false %}
+    {% set thumbnail = Image(post._thumbnail_id) %}
+  {% else %}
+    {% set thumbnail = false %}
+  {% endif %}
+  {% if thumbnail != false %}
+  <div class="hero--event-detail__media">
+    <img src="{{thumbnail.src}}" alt="{{thumbnail.alt}}" width="{{ thumbnail.width }}" height="{{ thumbnail.height }}">
+  </div>
+  {% endif %}  
+</div>

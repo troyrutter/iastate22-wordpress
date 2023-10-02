@@ -1,0 +1,23 @@
+<div class="paragraph-widget paragraph-widget--link-set"{% if fields.anchor_target|length > 0 %} id="{{ fields.anchor_target }}"{% endif %}>
+    <div class="link-set">
+        <ul>
+            {% for item in fields.links %}
+                {% if item.link_url %}
+                    <li>
+                    {% if item.link_style == "standard" %}
+                        {% set linkClass = "link-set__link iastate22-link-secondary" %}
+                    {% elseif item.link_style == "external" %}
+                        {% set linkClass = "link-set__link iastate22-link-external" %}
+                    {% elseif item.link_style == "minimal" %}
+                        {% set linkClass = "link-set__link link-tertiary" %}
+                    {% endif %}
+                        <a class="{{ linkClass }}" href="{{ item.link_url }}"{% if item.link_style == "external" %} target="_blank"{% endif %}>
+                            {{ item.label }}
+                            <span class="arrow"></span>
+                        </a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+</div>

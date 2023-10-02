@@ -1,0 +1,23 @@
+<div class="hero"{% if fields.anchor_target|length > 0 %} id="{{ fields.anchor_target }}"{% endif %}>
+  <div class="hero__text-wrap">
+    {% include ['templates/partial/breadcrumbs.twig'] %}
+    <h1 class="hero__title">
+      {% if fields.hero_title %}
+        {{fields.hero_title }}
+      {% else %}
+        {{ wp_title }}
+      {% endif %}
+    </h1>
+  </div>
+  {% if fields.hero_image %}
+  <div class="hero__media">
+    <img src="{{fields.hero_image.url}}" alt="{{fields.hero_image.alt}}" width="{{ fields.hero_image.width }}" height="{{ fields.hero_image.height }}">
+  </div>
+  {% endif %}
+  
+  {% if fields.subnav_toggle == true %}
+    <div class="hero__subnav-wrap">
+        {% include ['templates/partial/subnav.twig'] %}
+    </div>
+  {% endif %}
+</div>

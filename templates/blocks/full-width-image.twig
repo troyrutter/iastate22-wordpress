@@ -1,0 +1,10 @@
+<div class="paragraph-widget paragraph-widget--full-width-image"{% if fields.anchor_target|length > 0 %} id="{{ fields.anchor_target }}"{% endif %}>
+	<figure class="full-width-image">
+		{% if fields.image.url %}
+			<img src="{{ fields.image.url }}" alt="{{ fields.image.alt }}">
+		{% endif %}
+		{% if fields.image_caption_toggle == true %}
+			<figcaption class="full-width-image__caption text-content">{{ fields.image_caption }}</figcaption>
+		{% endif %}
+	</figure>
+</div>
