@@ -1,0 +1,10 @@
+## Team
+
+iastate Web Development Services
+webdev@iastate.edu
+https://webdev.its.iastate.edu/
+
+
+## Site
+
+Software: Custom wordpress theme for Iowa State University.
