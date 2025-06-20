@@ -24,14 +24,14 @@ if ( file_exists( $composer_autoload ) ) {
 if ( ! class_exists( 'Timber' ) ) {
 	add_action(
 		'admin_notices',
-		function () {
+		static function () {
 			echo '<div class="error"><p>Timber not activated. Make sure you activate the plugin in <a href="' . esc_url( admin_url( 'plugins.php#timber' ) ) . '">' . esc_url( admin_url( 'plugins.php' ) ) . '</a></p></div>';
 		}
 	);
 
 	add_filter(
 		'template_include',
-		function () {
+		static function () {
 			return get_stylesheet_directory() . '/static/no-timber.html';
 		}
 	);
@@ -50,9 +50,19 @@ Timber::$dirname = array( 'templates', 'views' );
  */
 Timber::$autoescape = false;
 
-if ( function_exists( 'acf_add_options_page' ) ) {
-	acf_add_options_page();
-}
+add_action( 'acf/init', function () {
+	if ( function_exists( 'acf_add_options_page' ) ) {
+		acf_add_options_page(
+				array(
+						'page_title' => __( 'Theme General Settings' ),
+						'menu_title' => __( 'Options' ),
+						'menu_slug'  => 'acf-options',
+						'capability' => 'manage_options',
+						'autoload'   => true,
+				)
+		);
+	}
+} );
 
 /**
  * We're going to configure our theme inside a subclass of Timber\Site
@@ -64,8 +74,6 @@ class StarterSite extends TimberSite {
 		add_action( 'after_setup_theme', array( $this, 'theme_supports' ) );
 		add_filter( 'timber/context', array( $this, 'add_to_context' ) );
 		add_filter( 'timber/twig', array( $this, 'add_to_twig' ) );
-		add_action( 'init', array( $this, 'register_post_types' ) );
-		add_action( 'init', array( $this, 'register_taxonomies' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'load_styles' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'load_scripts' ) );
 		parent::__construct();
@@ -76,9 +84,6 @@ class StarterSite extends TimberSite {
 	 * @param string $context context['this'] Being the Twig's {{ this }}.
 	 */
 	public function add_to_context( array $context ) {
-		$defaults = array(
-			'menu' => 'Main Menu'
-		);
 		if ( has_nav_menu( 'main-menu' ) ) {
 			$context['main_menu'] = new TimberMenu( "main-menu" );
 		}
@@ -110,7 +115,7 @@ class StarterSite extends TimberSite {
 				'taxonomy'   => $item->name,
 				'hide_empty' => $slug,
 			) );
-			array_push( $profileTerms, $terms );
+			$profileTerms[] = $terms;
 		}
 		$context['profile_tax']   = $profileTax;
 		$context['profile_terms'] = $profileTerms;
@@ -221,7 +226,7 @@ class StarterSite extends TimberSite {
 		$twig->addExtension( new StringLoaderExtension() );
 		$twig->addFilter( new \Timber\Twig_Filter( 'boolval', 'wp_validate_boolean' ) );
 
-		$esc_attr          = function ( Environment $env, $string ) {
+		$esc_attr = function ( Environment $env, $string ) {
 			return esc_attr( $string );
 		};
 		$escaper_extension = class_exists( 'Twig\Extension\EscaperExtension' ) ?
