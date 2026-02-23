@@ -68,7 +68,7 @@
                   {% endif %}
                 {% endif %}
                 {% if modal.source == "youtube" %}
-                  <div class="video-embed__video" aria-label="YouTube Video: {{ title }}"
+                  <div class="video-embed__video" data-aria-label="YouTube Video: {{ title }}"
                        data-vid="{{ youtube_video_id }}"></div>
                 {% elseif modal.source == "vimeo" %}
                   <div data-vimeo-id="{{ vimeo_video_id }}" class="video--vim"></div>

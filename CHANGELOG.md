@@ -7,14 +7,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+
+---
+
+## [1.4.0] - 2026-02-23
+
+### Changed
+
+- Package updates (iastate22-frontend: `v1.0.80`)
+- HTML template changes synced from "iastate22-frontend"
+- Timber context optimization
+- Blocks loading functions now in a Class
+- Author archive template
+
 ### Fixed
 
 - "News - Item" block would not render on public side
 - "Video" block did not show values in edit view
+- News search filter not filtering on tags
+- Profile icons accessibility
 
 ### Removed
 
 - Local editor validation script since ACF Pro supports it since 6.4
+- Unused template `sidebar.php`
 
 ---
 
@@ -149,3 +165,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [1.3.5]: https://github.com/iastate/iastate22-wordpress/compare/1.3.4...1.3.5
 [1.3.6]: https://github.com/iastate/iastate22-wordpress/compare/1.3.5...1.3.6
 [1.3.7]: https://github.com/iastate/iastate22-wordpress/compare/1.3.6...1.3.7
+[1.4.0]: https://github.com/iastate/iastate22-wordpress/compare/1.3.7...1.4.0
