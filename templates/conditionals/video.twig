@@ -7,7 +7,7 @@
 {% block video_vimeo %}
   <img src="https://vumbnail.com/{{ video.vimeo_video_id }}.jpg" alt="Video Poster">
   <div class="video--vim" data-vimeo-id="{{ video.vimeo_video_id|e('esc_attr') }}"
-       aria-label="Vimeo Video: {{ video.video_title }}"></div>
+       data-aria-label="Vimeo Video: {{ video.video_title }}"></div>
 {% endblock video_vimeo %}
 
 {% block video_local %}

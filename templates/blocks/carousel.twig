@@ -28,7 +28,7 @@
 								{% endif %}
 								{% if slide.carousel_video.video.source == "youtube" %}
 									<div class="video-embed__video"
-										 aria-label="YouTube Video: {{ slide.carousel_video.video.title }}"
+										 data-aria-label="YouTube Video: {{ slide.carousel_video.video.title }}"
 										 data-vid="{{ slide.carousel_video.video.youtube_video_id|e('esc_attr') }}"></div>
 								{% elseif slide.carousel_video.video.source == "vimeo" %}
 									<div data-vimeo-id="{{ slide.carousel_video.video.vimeo_video_id|e('esc_attr') }}"
