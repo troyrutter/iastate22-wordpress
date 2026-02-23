@@ -1,13 +1,13 @@
 {% block video_youtube %}
   <img src="https://img.youtube.com/vi/{{ video.youtube_video_id }}/maxresdefault.jpg" alt="Video Poster">
-  <div class="video-embed__video" aria-label="YouTube Video: {{ video.title }}"
+  <div class="video-embed__video" data-aria-label="YouTube Video: {{ video.title }}"
        data-vid="{{ video.youtube_video_id|e('esc_attr') }}"></div>
 {% endblock video_youtube %}
 
 {% block video_vimeo %}
   <img src="https://vumbnail.com/{{ video.vimeo_video_id }}.jpg" alt="Video Poster">
   <div class="video--vim" data-vimeo-id="{{ video.vimeo_video_id|e('esc_attr') }}"
-       aria-label="Vimeo Video: {{ video.video_title }}"></div>
+       data-aria-label="Vimeo Video: {{ video.video_title }}"></div>
 {% endblock video_vimeo %}
 
 {% block video_local %}

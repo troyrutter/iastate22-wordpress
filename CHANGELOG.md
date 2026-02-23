@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Accessibility changes from theme
+- Package updates (iastate22-frontend: v1.0.80)
+
 ### Fixed
 
 - "News - Item" block would not render on public side

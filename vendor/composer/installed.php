@@ -3,7 +3,7 @@
         'name' => 'iastate/wordpress-theme',
         'pretty_version' => 'dev-develop',
         'version' => 'dev-develop',
-        'reference' => 'e6db34f4d8d226aace130233815c392b9e13e3c2',
+        'reference' => 'f514f76faa29fb9857b7052922676f4f8a373bc5',
         'type' => 'wordpress-theme',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -31,7 +31,7 @@
         'iastate/frontend-component-library' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '2b4b006438691deb007316da3caafc9523fda8a8',
+            'reference' => '4e84554bc65bf5bd1d033df48b07f9d78b8af39c',
             'type' => 'library',
             'install_path' => __DIR__ . '/../iastate/frontend-component-library',
             'aliases' => array(
@@ -42,15 +42,15 @@
         'iastate/wordpress-theme' => array(
             'pretty_version' => 'dev-develop',
             'version' => 'dev-develop',
-            'reference' => 'e6db34f4d8d226aace130233815c392b9e13e3c2',
+            'reference' => 'f514f76faa29fb9857b7052922676f4f8a373bc5',
             'type' => 'wordpress-theme',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
         'symfony/polyfill-ctype' => array(
-            'pretty_version' => 'v1.32.0',
-            'version' => '1.32.0.0',
+            'pretty_version' => 'v1.33.0',
+            'version' => '1.33.0.0',
             'reference' => 'a3cc8b044a6ea513310cbd48ef7333b384945638',
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/polyfill-ctype',
@@ -58,8 +58,8 @@
             'dev_requirement' => false,
         ),
         'symfony/polyfill-mbstring' => array(
-            'pretty_version' => 'v1.32.0',
-            'version' => '1.32.0.0',
+            'pretty_version' => 'v1.33.0',
+            'version' => '1.33.0.0',
             'reference' => '6d857f4d76bd4b343eac26d6b539585d2bc56493',
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/polyfill-mbstring',

@@ -217,15 +217,15 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/iastate/iastate22-frontend.git",
-                "reference": "2b4b006438691deb007316da3caafc9523fda8a8"
+                "reference": "4e84554bc65bf5bd1d033df48b07f9d78b8af39c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/iastate/iastate22-frontend/zipball/2b4b006438691deb007316da3caafc9523fda8a8",
-                "reference": "2b4b006438691deb007316da3caafc9523fda8a8",
+                "url": "https://api.github.com/repos/iastate/iastate22-frontend/zipball/4e84554bc65bf5bd1d033df48b07f9d78b8af39c",
+                "reference": "4e84554bc65bf5bd1d033df48b07f9d78b8af39c",
                 "shasum": ""
             },
-            "time": "2025-07-28T14:45:23+00:00",
+            "time": "2025-09-24T14:19:12+00:00",
             "default-branch": true,
             "type": "library",
             "installation-source": "dist",
@@ -247,14 +247,14 @@
             "description": "Frontend component library for Iowa State University.",
             "support": {
                 "issues": "https://github.com/iastate/iastate22-frontend/issues",
-                "source": "https://github.com/iastate/iastate22-frontend/tree/1.0.79"
+                "source": "https://github.com/iastate/iastate22-frontend/tree/master"
             },
             "install-path": "../iastate/frontend-component-library"
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.32.0",
-            "version_normalized": "1.32.0.0",
+            "version": "v1.33.0",
+            "version_normalized": "1.33.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
@@ -315,7 +315,7 @@
                 "portable"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.32.0"
+                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.33.0"
             },
             "funding": [
                 {
@@ -327,6 +327,10 @@
                     "type": "github"
                 },
                 {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
                     "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
                     "type": "tidelift"
                 }
@@ -335,8 +339,8 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.32.0",
-            "version_normalized": "1.32.0.0",
+            "version": "v1.33.0",
+            "version_normalized": "1.33.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
@@ -399,7 +403,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.32.0"
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.33.0"
             },
             "funding": [
                 {
@@ -408,6 +412,10 @@
                 },
                 {
                     "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/nicolas-grekas",
                     "type": "github"
                 },
                 {
