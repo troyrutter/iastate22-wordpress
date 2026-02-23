@@ -47,13 +47,13 @@
 						<span class="visible-for-screen-readers">Search</span>
 						<span class="fak fa-iastate22-magnifying-glass" aria-hidden="true"></span>
 					</a>
+					<form class="site-header__search-form-desktop" method="get" action="{{ site.link|e('esc_url') }}">
+						{{ function('get_search_form') }}
+					</form>
 					<a href="#" class="site-header__search-close">
 						<span class="visible-for-screen-readers">Close Search</span>
 						<span class="fa-light fa-xmark"></span>
 					</a>
-					<form class="site-header__search-form-desktop" method="get" action="{{ site.link|e('esc_url') }}">
-						{{ function('get_search_form') }}
-					</form>
 				</div>
 			{% endif %}
 			{% if options.utility_nav_button == true and options.utility_button.url|length > 0 and options.utility_button.title|length > 0 %}
